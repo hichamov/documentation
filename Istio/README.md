@@ -48,5 +48,20 @@ The main capabilites of istio are:
   
 * Observability: Istio’s robust tracing, monitoring, and logging features give you deep insights into your service mesh deployment
 
+### Architecture
+
+An Istio service mesh is logically split into a data plane and a control plane.
+
+* The data plane is composed of a set of intelligent proxies (Envoy) deployed as sidecars. These proxies mediate and control all network communication between microservices. They also collect and report telemetry on all mesh traffic.
+
+* The control plane manages and configures the proxies to route traffic.
+
+Components:
+
+* Envoy: A high-performance proxy developed in C++ to mediate all inbound and outbound traffic for all services in the service mesh, it allows traffic control with rich routing rules for http, grpc .., network resiliency, security and authentication.
+
+* Istiod: Istiod provides service discovery, configuration and certificate management, and converts high-level rules into Envoy specific configuration, enables service-to-service authentication & encryption, and acts as a CA for all services in the mesh. 
+
 ### Traffic Management
+
 

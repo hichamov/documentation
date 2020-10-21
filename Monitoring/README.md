@@ -53,3 +53,24 @@ It offers a language `PromQL` to query the database, throught prometheus UI or o
 
 ### Setup For Kubernetes
 
+We will be using the official promtheus operator
+
+Add the officiel prometheus repository
+
+```
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+```
+
+Update the repository
+
+```
+helm repo update
+```
+
+Install the operator
+
+```
+helm install prometheus stable/prometheus-operator
+```
+
+

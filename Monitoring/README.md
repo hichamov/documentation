@@ -34,7 +34,7 @@ For applications, prometheus offers client libraries for the following languages
 
 While prometheus uses a Pull method to scrape metrics, there are few cases when we need to push metrics to Prometheus, for example, a Batch job, a backup script, in this case, we will use the push gateway.
 
-##### Configuration: 
+##### Configuration
 
 Promtheus reads its configuration from a yaml file called `prometheus.yaml`, which has 3 main sections:
 
